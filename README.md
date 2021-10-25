@@ -5,7 +5,8 @@ Also don't forget to check `cmd/main.go` file to see example usage of parser.
 
 # Requirements
 - golang:1.16 | docker
-You need to install [docker](https://docs.docker.com/desktop/) in order to run the example and tests.
+
+>You need to install [docker](https://docs.docker.com/desktop/) in order to run the example and tests.
 
 # Installation
 ```bash
