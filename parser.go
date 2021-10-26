@@ -27,13 +27,13 @@ func (p Parser) Parse(spec string) (Entry, error) {
 	entry := Entry{}
 
 	if len(spec) == 0 {
-		return Entry{}, fmt.Errorf("cron spec string cannot be empty.")
+		return entry, fmt.Errorf("cron spec string cannot be empty.")
 	}
 
 	// Split on whitespaces.
 	fields := strings.Fields(spec)
 	if len(fields) < MaxAllowedFields {
-		return Entry{}, fmt.Errorf("expected exactly %d fields, found %d, %s", MaxAllowedFields, len(fields), spec)
+		return entry, fmt.Errorf("expected exactly %d fields, found %d, %s", MaxAllowedFields, len(fields), spec)
 	}
 
 	entry.Minutes = MustParseField(fields[0], minutes)
